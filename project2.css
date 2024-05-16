@@ -1,0 +1,228 @@
+* {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    font-family: 'Rubik';
+}
+
+  .profilePic {
+    height: 50px;
+  }
+  .profileSection {
+    display: flex;
+  }
+  .profileSection span {
+    height: 20px;
+    color: hsl(211, 10%, 45%);
+    margin-top: 18px;
+  }
+  .post {
+    width: 600px;
+    margin: 0 auto;
+    background-color: hsl(223, 19%, 93%);
+    padding: 10px;
+    overflow: hidden;
+  }
+  h5 {
+    width: 110px;
+    padding: 15px;
+    font-size: 20px;
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    width: 80px;
+    background-color: hsl(223, 19%, 93%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .btn span {
+    background-color: hsl(223, 19%, 93%);
+  }
+  .btn .plus {
+    background-color: hsl(223, 19%, 93%);
+    margin-top: 5px;
+    height: 19px;
+  }
+  .btn .minus {
+    background-color: hsl(223, 19%, 93%);
+    margin-top: 12px;
+    height: 7px;
+  }
+  .counter {
+    background-color: hsl(223, 19%, 93%);
+    font-size: 23px;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+  }
+
+  .reply,
+  .replyToPost {
+    text-align: center;
+    width: 30px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+  }
+  .replysection {
+    padding-top: 10px;
+    font-size: 23px;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+  }
+
+  .firstComment {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: white;
+  }
+  .replycommentItem {
+    background-color: hsl(223, 19%, 93%);
+    width: 580px;
+    border-left: 1px solid hsl(216, 3%, 62%);
+    overflow: hidden;
+    float: right;
+  }
+  .replycommentItem::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .postReply {
+    width: 540px;
+    float: right;
+    background-color: hsl(223, 19%, 93%);
+  }
+
+  .textarea {
+    width: 350px;
+    border: 1px solid hsl(223, 19%, 93%);
+    border-radius: 8px;
+    margin: 30px;
+    height: 50px;
+    resize: none;
+  }
+  .deleteIcon {
+    margin-left: 200px;
+    padding-top: 18px;
+    height: 20px;
+    color: hsl(358, 79%, 66%);
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .editIcon {
+    padding-top: 20px;
+    height: 20px;
+    color: hsl(238, 40%, 52%);
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .edit,
+  .delete {
+    width: 20px;
+    padding-right: 5px;
+  }
+  .commentBoxtext {
+    width: 500px;
+    border: 1px solid hsl(223, 19%, 93%);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 30px;
+    height: 200px;
+    resize: none;
+  }
+
+  .imagebox {
+    display: flex;
+    height: 60px;
+    position: relative;
+    left: 25px;
+    top: 15px;
+  }
+
+  .butn {
+    display: inline-block;
+    width: 150px;
+    height: 60px;
+    font-size: 25px;
+    float: right;
+    border: 1px solid hsl(238, 40%, 52%);
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    bottom: 40px;
+    right: 50px;
+    background-color: hsl(238, 40%, 52%);
+  }
+  .commentBox {
+    overflow: hidden;
+    float: right;
+    width: 590px;
+    border-radius: 8px;
+    margin: 15px 5px;
+  }
+  .you {
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    font-weight: bold;
+    width: 30px;
+    height: 19px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+  }
+  .addDiv {
+    padding: 10px;
+    height: 90px;
+    border-radius: 8px;
+    margin: 5px;
+    float: right;
+  }
+  .avatar {
+    width: 40px;
+    position: relative;
+    bottom: 40px;
+  }
+  .replyButton {
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+    border-radius: 8px;
+    width: 90px;
+    height: 40px;
+    position: relative;
+    bottom: 55px;
+    background-color: hsl(238, 40%, 52%);
+    border: 0;
+  }
+  .addDivreply {
+    padding: 10px;
+    height: 90px;
+    border-radius: 8px;
+    margin: 5px;
+  }
+  .replytextarea {
+    width: 300px;
+    border: 1px solid hsl(223, 19%, 93%);
+    border-radius: 8px;
+    margin: 30px;
+    height: 50px;
+    resize: none;
+  }
+  .deletepage {
+    background-color: rgba(128, 128, 128, 0.437);
+    border: 0;
+    margin: auto;
+    width: 200px;
+  }
