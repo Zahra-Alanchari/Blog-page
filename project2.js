@@ -74,6 +74,7 @@ loadingPage()
       reply.innerHTML = `<img class="reply" src="./images/icon-reply.svg" alt="">reply`;
       box.appendChild(reply);
       reply.setAttribute("class", "replysection");
+      reply.classList.add("repp")
 
       mainBody.appendChild(post);
       //vvvvvvvvvvvvvvvvvvvvv
@@ -155,14 +156,16 @@ loadingPage()
           reply.innerHTML = `<img class="replyToPost" src="./images/icon-reply.svg" alt="">reply`;
           box.appendChild(reply);
           reply.setAttribute("class", "replysection");
+          reply.classList.add("replyIcon")
+
         }
       });
     });
 
     const plusToNumber = document.querySelectorAll(".plus");
     const minusToNumber = document.querySelectorAll(".minus");
-    const replyToComment = document.querySelectorAll(".reply");
-    const replyToPost = document.querySelectorAll(".replyToPost");
+    const replyToComment = document.querySelectorAll(".repp");
+    const replyToPost = document.querySelectorAll(".replyIcon");
 
     plusToNumber.forEach((item) => {
       item.addEventListener("click", plusOne);
