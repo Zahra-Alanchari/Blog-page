@@ -1,7 +1,417 @@
-$color-white : white;
+$color-white: white;
+$color-gray: hsl(211, 10%, 45%);
+$very-light-gray:hsla(228, 33%, 97%, 1);
+$light-gray:hsla(224, 19%, 93%, 1);
+$color-blue: hsl(238, 40%, 52%);
+$color-red: hsla(358, 79%, 66%, 1);
+
+@mixin widthAndHight($width, $height) {
+  width: $width * 1px;
+  height: $height * 1px;
+}
+@mixin positionTopAndLeft($top, $left) {
+  position: absolute;
+  top: $top * 1px;
+  left: $left * 1px;
+}
+@mixin fontweight{
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin dialogButton($col){
+  color: $color-white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $col;
+}
 
 * {
-    background-color: $color-white;
-    padding: 0;
-    margin: 0;
+  background-color: $color-white;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Rubik";
+  font-size: 16px;
+}
+
+.profileSection {
+  display: flex;
+  @include widthAndHight(273, 32);
+  .you {
+    @include widthAndHight(36, 19);
+    @include positionTopAndLeft(15, 135);
+    background-color: $color-blue;
+    color: $color-white;
+    border-radius: 3px;
+    text-align: center;
   }
+  .days {
+    @include widthAndHight(80, 24);
+    @include positionTopAndLeft(15, 180);
+  }
+
+  .profilePic {
+    @include widthAndHight(32, 32);
+  }
+
+  span {
+    @include widthAndHight(92, 24);
+    @include positionTopAndLeft(16, 161);
+    color: $color-gray;
+  }
+}
+
+#main {
+  width: 375px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.post {
+  width: 375px;
+  margin: 0 auto;
+  background-color: $very-light-gray;
+  padding: 10px;
+  overflow: hidden;
+
+  .addDiv {
+    @include widthAndHight(353, 70);
+    padding: 7px;
+    border-radius: 8px;
+    margin: 6px;
+    position: relative;
+    .avatar {
+      @include widthAndHight(36, 36);
+      @include positionTopAndLeft(10, 10);
+    }
+
+    .textarea {
+      @include widthAndHight(200, 50);
+      @include positionTopAndLeft(10, 60);
+      border: 1px solid $very-light-gray;
+      border-radius: 8px;
+      resize: none;
+    }
+    .replyButton {
+      @include widthAndHight(80, 30);
+      @include positionTopAndLeft(10, 270);
+      font-weight: 400;
+      color: $color-white;
+      border-radius: 8px;
+      background-color: $color-blue;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}
+.maxblagun {
+  @include widthAndHight(343, 280);
+  .btn {
+    @include widthAndHight(100, 40);
+    @include positionTopAndLeft(224, 16);
+    background-color: $very-light-gray;
+    border-radius: 8px;
+
+    span {
+      background-color: $very-light-gray;
+    }
+    .plus {
+      @include widthAndHight(10.07, 10);
+      @include positionTopAndLeft(14.9, 15.58);
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+    .minus {
+      @include widthAndHight(10, 2.5);
+      @include positionTopAndLeft(19, 78);
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+    .counter {
+      @include positionTopAndLeft(10, 35);
+      @include widthAndHight(30, 19);
+      background-color: $very-light-gray;
+      color: #5357b6;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+.maxblagun {
+  .replysection {
+    @include widthAndHight(66, 24);
+    @include positionTopAndLeft(232, 261);
+    @include fontweight();
+    color: hsl(238, 40%, 52%);
+    cursor: pointer;
+
+    .reply {
+      @include widthAndHight(14, 12.25);
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+.amyrobson {
+  @include widthAndHight(343, 256);
+  .btn {
+    @include widthAndHight(100, 40);
+    @include positionTopAndLeft(200, 16);
+    background-color: $very-light-gray;
+    border-radius: 8px;
+
+    span {
+      background-color: $very-light-gray;
+    }
+    .plus {
+      @include widthAndHight(10.07, 10);
+      @include positionTopAndLeft(14.9, 15.58);
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+    .minus {
+      @include widthAndHight(10, 2.5);
+      @include positionTopAndLeft(19, 78);
+      background-color: $very-light-gray;
+      cursor: pointer;
+    }
+    .counter {
+      @include widthAndHight(30, 19);
+      @include positionTopAndLeft(10, 35);
+      background-color: $very-light-gray;
+      color: $color-blue;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
+
+.amyrobson {
+  .replysection {
+    color: $color-blue;
+    @include widthAndHight(66, 24);
+    @include positionTopAndLeft(208, 261);
+    @include fontweight();
+    cursor: pointer;
+
+    .reply {
+      @include widthAndHight(14, 12.25);
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+.replycommentItem {
+  background-color: $very-light-gray;
+  width: 343px;
+  padding: 15px;
+  border-left: 1px solid $light-gray;
+  overflow: hidden;
+
+  .postReply {
+    width: 325px;
+    background-color: $very-light-gray;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.post {
+  .firstComment {
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: $color-white;
+    position: relative;
+  }
+}
+.post {
+  .paragraph {
+    @include widthAndHight(311, 120);
+    line-height: 24px;
+    color: $color-gray;
+    margin-top: 12px;
+  }
+}
+
+.postReply {
+  .firstComment {
+    @include widthAndHight(325, 260);
+    border-radius: 8px;
+    margin-top: 15px;
+    position: relative;
+    .btn {
+      @include widthAndHight(100, 40);
+      @include positionTopAndLeft(224, 16);
+      background-color: $very-light-gray;
+      border-radius: 8px;
+      span {
+        background-color: $very-light-gray;
+      }
+      .plus {
+        @include widthAndHight(10.07, 10);
+        @include positionTopAndLeft(14.9, 15.58);
+        background-color: $very-light-gray;
+        cursor: pointer;
+      }
+      .minus {
+        @include widthAndHight(10, 2.5);
+        @include positionTopAndLeft(19, 78);
+        background-color: $very-light-gray;
+        cursor: pointer;
+      }
+      .counter {
+        @include widthAndHight(30, 19);
+        @include positionTopAndLeft(10, 35);
+        background-color: $very-light-gray;
+        color: $color-blue;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+    .replysection {
+      @include widthAndHight(66, 24);
+      @include positionTopAndLeft(232, 243);
+      @include fontweight();
+      color: $color-blue;
+      cursor: pointer;
+      .replyToPost {
+        @include widthAndHight(14, 12.25);
+        padding-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .paragraph {
+    @include widthAndHight(293, 144);
+    line-height: 24px;
+    color: $color-gray;
+    margin-top: 12px;
+  }
+}
+
+h5 {
+  width: 100px;
+  padding: 6px;
+  font-size: 16px;
+}
+.deleteIcon {
+  @include widthAndHight(83, 19);
+  @include positionTopAndLeft(237, 190);
+  color: $color-red;
+  font-weight: 400;
+  .delete {
+    @include widthAndHight(10.67, 14);
+  }
+}
+.editIcon {
+  @include widthAndHight(54, 24);
+  @include positionTopAndLeft(238, 260);
+  color: $color-blue;
+  font-weight: 400;
+  .edit {
+    @include widthAndHight(14, 13.96);
+  }
+}
+
+.box {
+  @include widthAndHight(311, 40);
+}
+
+.addDivreply {
+  @include widthAndHight(324, 70);
+  padding: 11px;
+  border-radius: 8px;
+  margin: 7px;
+  position: relative;
+  .avatar {
+    @include widthAndHight(36, 36);
+    @include positionTopAndLeft(10, 10);
+  }
+
+  .replytextarea {
+    @include positionTopAndLeft(10, 60);
+    @include widthAndHight(200, 50);
+    border: 1px solid $very-light-gray;
+    border-radius: 8px;
+    resize: none;
+  }
+
+  .replyButton {
+    @include widthAndHight(70, 30);
+    @include positionTopAndLeft(10, 270);
+    font-weight: 400;
+    color: $color-white;
+    border-radius: 8px;
+    background-color: $color-blue;
+    border: 0;
+    cursor: pointer;
+  }
+}
+.commentBox {
+  @include widthAndHight(374, 189);
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin: 10px 0;
+  position: relative;
+  .commentBoxtext {
+    @include widthAndHight(311, 96);
+    @include positionTopAndLeft(30, 20);
+    border: 1px solid $very-light-gray;
+    border-radius: 8px;
+    resize: none;
+  }
+  .butn {
+    @include widthAndHight(104, 48);
+    @include positionTopAndLeft(130, 239);
+    border: 1px solid $color-blue;
+    border-radius: 8px;
+    color: $color-white;
+    background-color: $color-blue;
+  }
+  .imagebox {
+    @include widthAndHight(32, 32);
+    margin-left: 30px;
+    position: absolute;
+    top: 140px;
+  }
+}
+
+.deletepage {
+  @include widthAndHight(343, 224);
+  background-color: $color-white;
+  border: 0;
+  margin: auto;
+  border-radius: 5px;
+  h3 {
+    @include widthAndHight(288, 24);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.7px;
+    margin: 15px;
+  }
+  p {
+    @include widthAndHight(288, 72);
+    color: $color-gray;
+    margin: 15px;
+  }
+  #no {
+    @include widthAndHight(138, 48);
+    @include dialogButton($color-gray);
+    margin: 15px;
+  }
+  #yes {
+    @include widthAndHight(138, 48);
+    @include dialogButton($color-red);
+    margin-right: 15px;
+  }
+}
+
+

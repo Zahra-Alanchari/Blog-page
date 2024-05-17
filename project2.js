@@ -18,6 +18,7 @@ loadingPage()
       const firstComment = document.createElement("div");
       firstComment.setAttribute("class", "firstComment");
       post.appendChild(firstComment);
+      
 
       const profile = document.createElement("div");
       firstComment.appendChild(profile);
@@ -33,12 +34,19 @@ loadingPage()
       name.className = "name";
       profile.appendChild(name);
 
+      if (name.innerHTML === "maxblagun") {
+        firstComment.classList.add("maxblagun");
+      }else if(name.innerHTML === "amyrobson") {
+        firstComment.classList.add("amyrobson")
+      }
+
       const date = document.createElement("span");
       date.innerHTML = comments.createdAt;
       profile.appendChild(date);
 
       const content = document.createElement("div");
       content.innerHTML = comments.content;
+      content.className = "paragraph";
       firstComment.appendChild(content);
 
       const box = document.createElement("div");
@@ -94,19 +102,21 @@ loadingPage()
         name.innerHTML = repliesItem.user.username;
         profile.appendChild(name);
 
+        const date = document.createElement("span");
+        date.innerHTML = repliesItem.createdAt;
+        profile.appendChild(date);
+
         if (name.innerHTML === "juliusomo") {
           const you = document.createElement("div");
           you.innerHTML = "you";
           you.className = "you";
           profile.appendChild(you);
+          date.className= 'days'
         }
-
-        const date = document.createElement("span");
-        date.innerHTML = repliesItem.createdAt;
-        profile.appendChild(date);
 
         const content = document.createElement("div");
         content.innerHTML = repliesItem.content;
+        content.className = "paragraph";
         firstComment.appendChild(content);
 
         const box = document.createElement("div");
