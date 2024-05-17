@@ -230,7 +230,7 @@ loadingPage()
     });
 
     const dialog = document.querySelector("dialog");
-    let del = document.querySelector(".delete");
+    let del = document.querySelector(".deleteIcon");
     del.addEventListener("click", openMedia);
     let no = document.getElementById("no");
     let yes = document.getElementById("yes");
