@@ -4,6 +4,7 @@ $very-light-gray:hsla(228, 33%, 97%, 1);
 $light-gray:hsla(224, 19%, 93%, 1);
 $color-blue: hsl(238, 40%, 52%);
 $color-red: hsla(358, 79%, 66%, 1);
+$Light-grayish-blue: hsl(239, 57%, 85%);
 
 @mixin widthAndHight($width, $height) {
   width: $width * 1px;
@@ -68,7 +69,6 @@ body {
   width: 375px;
   margin: 0 auto;
   padding: 10px;
-  // background-color: $very-light-gray;
 }
 
 .post {
@@ -414,5 +414,291 @@ h5 {
     margin-right: 15px;
   }
 }
+//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+@media screen and (min-width:980px) {
+  body{
+    background-color: $very-light-gray;
+  }
+
+  .post {
+    width: 730px;
+    margin: 0 auto;
+    padding: 1px;
+    overflow: hidden;
+  
+    .addDiv {
+      @include widthAndHight(730, 144);
+      padding: 0px;
+      margin: 0px;
+      margin-top: 6px;
+      margin-left: 1px;
+      .avatar {
+        @include widthAndHight(40, 40);
+        @include positionTopAndLeft(25, 25);
+      }
+  
+      .textarea {
+        @include widthAndHight(506, 96);
+        @include positionTopAndLeft(25, 90);
+      }
+      .replyButton {
+        @include widthAndHight(104, 48);
+        @include positionTopAndLeft(25, 610);
+        font-weight: bold;
+        &:hover{
+          background-color: $Light-grayish-blue;
+        }
+      }
+    }
+  }
+
+  .profileSection {
+    display: flex;
+    @include widthAndHight(273, 32);
+    .you {
+      @include positionTopAndLeft(7, 120);
+    }
+    .days {
+      @include widthAndHight(80, 24);
+      @include positionTopAndLeft(15, 180);
+    }
+  
+    .profilePic {
+      @include widthAndHight(32, 32);
+      @include positionTopAndLeft(16, 88);
+    }
+  
+    span {
+      @include widthAndHight(92, 24);
+      @include positionTopAndLeft(22, 239);
+    }
+    .name{
+      @include positionTopAndLeft(16, 136);
+      font-weight: 400;
+    }
+  }
+
+
+  #main {
+    width: 740px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: $very-light-gray;
+  }
+  .maxblagun {
+    @include widthAndHight(730, 167);
+    .btn {
+      @include widthAndHight(40, 100);
+      @include positionTopAndLeft(24, 24);
+      .plus {
+        @include positionTopAndLeft(11.9, 15.58);
+        // &:hover{
+        //   color: $color-blue;
+        //   }
+      }
+      .minus {
+        @include positionTopAndLeft(81.16, 15.01);
+      }
+      .counter {
+        @include positionTopAndLeft(41, 5);
+        color: $color-blue;
+        font-weight: 400;
+        line-height: 18.96px;
+      }
+    }
+  }
+  .maxblagun {
+    .replysection {
+      @include positionTopAndLeft(17, 640);
+  
+      .reply {
+        @include widthAndHight(14, 12.25);
+        padding-right: 5px;
+        vertical-align: middle;
+      }
+      &:hover{
+        color: $Light-grayish-blue;
+      }
+    }
+  }
+  .amyrobson {
+    @include widthAndHight(730, 167);
+    .btn {
+      @include widthAndHight(40, 100);
+      @include positionTopAndLeft(24, 24);
+      .plus {
+        @include positionTopAndLeft(11.9, 15.58);
+      }
+      .minus {
+        @include positionTopAndLeft(81.16, 15.01);
+      }
+      .counter {
+        @include positionTopAndLeft(41, 5);
+        font-weight: 400;
+        line-height: 18.96px;
+      }
+    }
+  }
+  
+  .amyrobson {
+    .replysection {
+      @include positionTopAndLeft(17, 640);
+      &:hover{
+        color: $Light-grayish-blue;
+      }
+    }
+  }
+  .replycommentItem {
+    width: 660px;
+    margin-left: 40px;
+    margin-top: 15px;
+    overflow: hidden;
+  
+    .postReply {
+      width: 642px;
+    }
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  
+  .post {
+    .firstComment {
+      padding: 0px;
+      margin-left: 0px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+  }
+  .post {
+    .paragraph {
+      @include widthAndHight(618, 72);
+      @include fontweight();
+      @include positionTopAndLeft(71, 88);
+      margin-top: 0px;
+    }
+  }
+  
+  .postReply {
+    .firstComment {
+      @include widthAndHight(642, 167);
+      margin-top: 10px;
+      margin-left: 30px;
+      position: relative;
+      overflow: hidden;
+      .paragraph {
+        @include widthAndHight(530, 72);
+        @include fontweight();
+        @include positionTopAndLeft(71, 88);
+        margin-top: 0px;
+      }
+      .profileSection{
+        @include positionTopAndLeft(24, 88);
+        span{
+          @include positionTopAndLeft(6, 180);
+        }
+
+      }
+      .btn {
+        @include widthAndHight(40, 100);
+        @include positionTopAndLeft(24, 24);
+        .plus {
+          @include positionTopAndLeft(11.9, 15.58);
+        }
+        .minus {
+          @include positionTopAndLeft(81.16, 15.01);
+        }
+        .counter {
+          @include positionTopAndLeft(41, 5);
+          line-height: 18.96px;
+        }
+      }
+      .replysection {
+        @include positionTopAndLeft(28, 552);
+        &:hover{
+          color: $Light-grayish-blue;
+        }
+        .replyToPost {
+          @include widthAndHight(14, 12.25);
+        }
+      }
+    }
+  }
+
+  .deleteIcon {
+    @include positionTopAndLeft(30, 487);
+    &:hover{
+      color: hsl(357, 100%, 86%);
+      }
+    
+
+    .delete {
+      @include widthAndHight(10.67, 14);
+    }
+  }
+  .editIcon {
+    @include positionTopAndLeft(29, 563);
+    &:hover{
+      color: $Light-grayish-blue;
+      }
+  }
+  
+  .box {
+    @include widthAndHight(311, 40);
+  }
+  
+  .addDivreply {
+    @include widthAndHight(642, 144);
+    padding: 0px;
+    margin:0px;
+    margin-left: 30px;
+    margin-top: 5px;
+    .avatar {
+      @include widthAndHight(40, 40);
+      @include positionTopAndLeft(25, 25);
+    }
+  
+    .replytextarea {
+      @include positionTopAndLeft(25, 90);
+      @include widthAndHight(418, 96);
+    }
+  
+    .replyButton {
+      @include widthAndHight(104, 48);
+      @include positionTopAndLeft(25, 520);
+      font-weight: bold;
+      &:hover{
+        background-color: $Light-grayish-blue;
+      }
+    }
+  }
+  .commentBox {
+    @include widthAndHight(730, 144);
+    margin: 0 auto;
+    margin: 10px 0;
+    .commentBoxtext {
+      @include widthAndHight(506, 96);
+      @include positionTopAndLeft(25, 90);
+    }
+    .butn {
+      @include widthAndHight(104, 48);
+      @include positionTopAndLeft(25, 610);
+      font-weight: bold;
+      &:hover{
+        background-color: $Light-grayish-blue;
+        border:1px solid $Light-grayish-blue;
+        }
+      }
+      .imagebox {
+        @include widthAndHight(40, 40);
+        margin-left: 30px;
+        @include positionTopAndLeft(25, 5);
+      }
+    }
+    
+  }
+
 
 

@@ -488,4 +488,354 @@ h5 {
   cursor: pointer;
   background-color: hsl(358, 79%, 66%);
   margin-right: 15px;
+}
+
+@media screen and (min-width: 980px) {
+  body {
+    background-color: hsl(228, 33%, 97%);
+  }
+  .post {
+    width: 730px;
+    margin: 0 auto;
+    padding: 1px;
+    overflow: hidden;
+  }
+  .post .addDiv {
+    width: 730px;
+    height: 144px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 6px;
+    margin-left: 1px;
+  }
+  .post .addDiv .avatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .post .addDiv .textarea {
+    width: 506px;
+    height: 96px;
+    position: absolute;
+    top: 25px;
+    left: 90px;
+  }
+  .post .addDiv .replyButton {
+    width: 104px;
+    height: 48px;
+    position: absolute;
+    top: 25px;
+    left: 610px;
+    font-weight: bold;
+  }
+  .post .addDiv .replyButton:hover {
+    background-color: hsl(239, 57%, 85%);
+  }
+  .profileSection {
+    display: flex;
+    width: 273px;
+    height: 32px;
+  }
+  .profileSection .you {
+    position: absolute;
+    top: 7px;
+    left: 120px;
+  }
+  .profileSection .days {
+    width: 80px;
+    height: 24px;
+    position: absolute;
+    top: 15px;
+    left: 180px;
+  }
+  .profileSection .profilePic {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    left: 88px;
+  }
+  .profileSection span {
+    width: 92px;
+    height: 24px;
+    position: absolute;
+    top: 22px;
+    left: 239px;
+  }
+  .profileSection .name {
+    position: absolute;
+    top: 16px;
+    left: 136px;
+    font-weight: 400;
+  }
+  #main {
+    width: 740px;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: hsl(228, 33%, 97%);
+  }
+  .maxblagun {
+    width: 730px;
+    height: 167px;
+  }
+  .maxblagun .btn {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .maxblagun .btn .plus {
+    position: absolute;
+    top: 11.9px;
+    left: 15.58px;
+  }
+  .maxblagun .btn .minus {
+    position: absolute;
+    top: 81.16px;
+    left: 15.01px;
+  }
+  .maxblagun .btn .counter {
+    position: absolute;
+    top: 41px;
+    left: 5px;
+    color: hsl(238, 40%, 52%);
+    font-weight: 400;
+    line-height: 18.96px;
+  }
+  .maxblagun .replysection {
+    position: absolute;
+    top: 17px;
+    left: 640px;
+  }
+  .maxblagun .replysection .reply {
+    width: 14px;
+    height: 12.25px;
+    padding-right: 5px;
+    vertical-align: middle;
+  }
+  .maxblagun .replysection:hover {
+    color: hsl(239, 57%, 85%);
+  }
+  .amyrobson {
+    width: 730px;
+    height: 167px;
+  }
+  .amyrobson .btn {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .amyrobson .btn .plus {
+    position: absolute;
+    top: 11.9px;
+    left: 15.58px;
+  }
+  .amyrobson .btn .minus {
+    position: absolute;
+    top: 81.16px;
+    left: 15.01px;
+  }
+  .amyrobson .btn .counter {
+    position: absolute;
+    top: 41px;
+    left: 5px;
+    font-weight: 400;
+    line-height: 18.96px;
+  }
+  .amyrobson .replysection {
+    position: absolute;
+    top: 17px;
+    left: 640px;
+  }
+  .amyrobson .replysection:hover {
+    color: hsl(239, 57%, 85%);
+  }
+  .replycommentItem {
+    width: 660px;
+    margin-left: 40px;
+    margin-top: 15px;
+    overflow: hidden;
+  }
+  .replycommentItem .postReply {
+    width: 642px;
+  }
+  .replycommentItem::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .post .firstComment {
+    padding: 0px;
+    margin-left: 0px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .post .paragraph {
+    width: 618px;
+    height: 72px;
+    font-weight: 400;
+    line-height: 24px;
+    position: absolute;
+    top: 71px;
+    left: 88px;
+    margin-top: 0px;
+  }
+  .postReply .firstComment {
+    width: 642px;
+    height: 167px;
+    margin-top: 10px;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  .postReply .firstComment .paragraph {
+    width: 530px;
+    height: 72px;
+    font-weight: 400;
+    line-height: 24px;
+    position: absolute;
+    top: 71px;
+    left: 88px;
+    margin-top: 0px;
+  }
+  .postReply .firstComment .profileSection {
+    position: absolute;
+    top: 24px;
+    left: 88px;
+  }
+  .postReply .firstComment .profileSection span {
+    position: absolute;
+    top: 6px;
+    left: 180px;
+  }
+  .postReply .firstComment .btn {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+  }
+  .postReply .firstComment .btn .plus {
+    position: absolute;
+    top: 11.9px;
+    left: 15.58px;
+  }
+  .postReply .firstComment .btn .minus {
+    position: absolute;
+    top: 81.16px;
+    left: 15.01px;
+  }
+  .postReply .firstComment .btn .counter {
+    position: absolute;
+    top: 41px;
+    left: 5px;
+    line-height: 18.96px;
+  }
+  .postReply .firstComment .replysection {
+    position: absolute;
+    top: 28px;
+    left: 552px;
+  }
+  .postReply .firstComment .replysection:hover {
+    color: hsl(239, 57%, 85%);
+  }
+  .postReply .firstComment .replysection .replyToPost {
+    width: 14px;
+    height: 12.25px;
+  }
+  .deleteIcon {
+    position: absolute;
+    top: 30px;
+    left: 487px;
+  }
+  .deleteIcon:hover {
+    color: hsl(357, 100%, 86%);
+  }
+  .deleteIcon .delete {
+    width: 10.67px;
+    height: 14px;
+  }
+  .editIcon {
+    position: absolute;
+    top: 29px;
+    left: 563px;
+  }
+  .editIcon:hover {
+    color: hsl(239, 57%, 85%);
+  }
+  .box {
+    width: 311px;
+    height: 40px;
+  }
+  .addDivreply {
+    width: 642px;
+    height: 144px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  .addDivreply .avatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .addDivreply .replytextarea {
+    position: absolute;
+    top: 25px;
+    left: 90px;
+    width: 418px;
+    height: 96px;
+  }
+  .addDivreply .replyButton {
+    width: 104px;
+    height: 48px;
+    position: absolute;
+    top: 25px;
+    left: 520px;
+    font-weight: bold;
+  }
+  .addDivreply .replyButton:hover {
+    background-color: hsl(239, 57%, 85%);
+  }
+  .commentBox {
+    width: 730px;
+    height: 144px;
+    margin: 0 auto;
+    margin: 10px 0;
+  }
+  .commentBox .commentBoxtext {
+    width: 506px;
+    height: 96px;
+    position: absolute;
+    top: 25px;
+    left: 90px;
+  }
+  .commentBox .butn {
+    width: 104px;
+    height: 48px;
+    position: absolute;
+    top: 25px;
+    left: 610px;
+    font-weight: bold;
+  }
+  .commentBox .butn:hover {
+    background-color: hsl(239, 57%, 85%);
+    border: 1px solid hsl(239, 57%, 85%);
+  }
+  .commentBox .imagebox {
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+  }
 }/*# sourceMappingURL=style.css.map */
