@@ -148,6 +148,7 @@ body {
     @include fontweight();
     color: hsl(238, 40%, 52%);
     cursor: pointer;
+    border: none;
 
     .reply {
       @include widthAndHight(14, 12.25);
@@ -197,6 +198,7 @@ body {
     @include positionTopAndLeft(208, 261);
     @include fontweight();
     cursor: pointer;
+    border: none;
 
     .reply {
       @include widthAndHight(14, 12.25);
@@ -413,6 +415,16 @@ h5 {
     @include dialogButton($color-red);
     margin-right: 15px;
   }
+}
+.juliusomo .paragraph{
+  border: none;
+  font-family: 'Rubik';
+  font-size: 16px;
+  font-weight: 400;
+
+}
+.editParag{
+  display: none;
 }
 //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 @media screen and (min-width:980px) {

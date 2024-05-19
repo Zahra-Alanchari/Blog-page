@@ -1,5 +1,3 @@
-//get data
-
 function loadingPage() {
   return fetch("data.json")
     .then((response) => response.json())
@@ -8,9 +6,12 @@ function loadingPage() {
       throw error;
     });
 }
+
 loadingPage()
   .then((data) => {
+    let contentOfTextarea = "";
     let mainBody = document.getElementById("main");
+
     data.comments.map((comments) => {
       const post = document.createElement("div");
       post.setAttribute("class", "post");
@@ -18,7 +19,6 @@ loadingPage()
       const firstComment = document.createElement("div");
       firstComment.setAttribute("class", "firstComment");
       post.appendChild(firstComment);
-      
 
       const profile = document.createElement("div");
       firstComment.appendChild(profile);
@@ -36,8 +36,8 @@ loadingPage()
 
       if (name.innerHTML === "maxblagun") {
         firstComment.classList.add("maxblagun");
-      }else if(name.innerHTML === "amyrobson") {
-        firstComment.classList.add("amyrobson")
+      } else if (name.innerHTML === "amyrobson") {
+        firstComment.classList.add("amyrobson");
       }
 
       const date = document.createElement("span");
@@ -47,6 +47,7 @@ loadingPage()
       const content = document.createElement("div");
       content.innerHTML = comments.content;
       content.className = "paragraph";
+
       firstComment.appendChild(content);
 
       const box = document.createElement("div");
@@ -70,14 +71,14 @@ loadingPage()
       btn.appendChild(score);
       btn.appendChild(minus);
 
-      const reply = document.createElement("div");
+      const reply = document.createElement("button");
       reply.innerHTML = `<img class="reply" src="./images/icon-reply.svg" alt="">reply`;
       box.appendChild(reply);
       reply.setAttribute("class", "replysection");
-      reply.classList.add("repp")
+      reply.classList.add("repp");
 
       mainBody.appendChild(post);
-      //vvvvvvvvvvvvvvvvvvvvv
+
       const replycommentItem = document.createElement("div");
       replycommentItem.setAttribute("class", "replycommentItem");
       comments.replies.map((repliesItem) => {
@@ -107,18 +108,25 @@ loadingPage()
         date.innerHTML = repliesItem.createdAt;
         profile.appendChild(date);
 
+        const content = document.createElement("div");
+        content.innerHTML = repliesItem.content;
+        content.className = "paragraph";
+        firstComment.appendChild(content);
+
         if (name.innerHTML === "juliusomo") {
           const you = document.createElement("div");
           you.innerHTML = "you";
           you.className = "you";
           profile.appendChild(you);
-          date.className= 'days'
+          date.className = "days";
+          content.classList.add("editParag");
+          firstComment.classList.add("juliusomo");
+          const zahra = document.createElement("textarea");
+          zahra.defaultValue = repliesItem.content;
+          zahra.className = "paragraph";
+          firstComment.appendChild(zahra);
+          zahra.disabled = true; // Disable the textarea by default
         }
-
-        const content = document.createElement("div");
-        content.innerHTML = repliesItem.content;
-        content.className = "paragraph";
-        firstComment.appendChild(content);
 
         const box = document.createElement("div");
         box.setAttribute("class", "box");
@@ -156,8 +164,7 @@ loadingPage()
           reply.innerHTML = `<img class="replyToPost" src="./images/icon-reply.svg" alt="">reply`;
           box.appendChild(reply);
           reply.setAttribute("class", "replysection");
-          reply.classList.add("replyIcon")
-
+          reply.classList.add("replyIcon");
         }
       });
     });
@@ -179,7 +186,6 @@ loadingPage()
     });
 
     minusToNumber.forEach((item) => {
-      console.log(item);
       item.addEventListener("click", minusOne);
 
       function minusOne(event) {
@@ -194,41 +200,34 @@ loadingPage()
       item.addEventListener("click", ReplyClick);
 
       function ReplyClick() {
+        console.log("click");
         const replyComment = document.createElement("div");
         replyComment.className = "addDiv";
         const post = item.closest(".post");
-        const dom = post.firstElementChild.nextElementSibling;
-        console.log(dom);
 
-        if (dom) {
-          const last = mainBody.lastElementChild;
-          const commentBox = document.createElement("div");
-          last.appendChild(commentBox);
-          commentBox.setAttribute("class", "commentBox");
-
-          const commentBoxtext = document.createElement("textarea");
-          commentBox.appendChild(commentBoxtext);
-          commentBoxtext.setAttribute("class", "commentBoxtext");
-
-          const imagebox = document.createElement("img");
-          imagebox.src = "./images/avatars/image-juliusomo.webp";
-          imagebox.setAttribute("class", "imagebox");
-          commentBox.appendChild(imagebox);
-
-          const butn = document.createElement("button");
-          butn.innerHTML = `Send`;
-          butn.setAttribute("class", "butn");
-          commentBox.appendChild(butn);
-          item.removeEventListener("click", ReplyClick);
-        } else {
+        if (!post.querySelector(".addDiv")) {
           replyComment.innerHTML = `<img class="avatar" src="./images/avatars/image-juliusomo.webp" alt="">
                                 <textarea name="text" class="textarea" cols="30" rows="10"></textarea>
                                 <button class="replyButton">Reply</button>`;
           post.appendChild(replyComment);
-          item.removeEventListener("click", ReplyClick);
+          item.disabled = true;
+
+          const textBox = replyComment.querySelector(".textarea");
+          textBox.addEventListener(
+            "change",
+            (event) => (contentOfTextarea = event.target.value)
+          );
+
+          const saveReplyBtn = replyComment.querySelector(".replyButton");
+          saveReplyBtn.addEventListener("click", () => {
+            localStorage.setItem("content", contentOfTextarea);
+            replyComment.remove();
+            item.disabled = false;
+          });
         }
       }
     });
+
     replyToPost.forEach((item) => {
       item.addEventListener("click", ReplyClick);
 
@@ -236,16 +235,33 @@ loadingPage()
         const replyComment = document.createElement("div");
         replyComment.className = "addDivreply";
         const post = item.closest(".postReply");
-        replyComment.innerHTML = `<img class="avatar" src="./images/avatars/image-juliusomo.webp" alt="">
+
+        if (!post.querySelector(".addDivreply")) {
+          replyComment.innerHTML = `<img class="avatar" src="./images/avatars/image-juliusomo.webp" alt="">
                                 <textarea name="text" class="replytextarea" cols="30" rows="10"></textarea>
                                 <button class="replyButton">Reply</button>`;
-        post.appendChild(replyComment);
-        item.removeEventListener("click", ReplyClick);
+          post.appendChild(replyComment);
+          item.disabled = true;
+
+          const textBox = replyComment.querySelector(".replytextarea");
+          textBox.addEventListener(
+            "change",
+            (event) => (contentOfTextarea = event.target.value)
+          );
+
+          const saveReplyBtn = replyComment.querySelector(".replyButton");
+          saveReplyBtn.addEventListener("click", () => {
+            localStorage.setItem("content", contentOfTextarea);
+            replyComment.remove();
+            item.disabled = false;
+          });
+        }
       }
     });
 
     const dialog = document.querySelector("dialog");
     let del = document.querySelector(".deleteIcon");
+
     del.addEventListener("click", openMedia);
     let no = document.getElementById("no");
     let yes = document.getElementById("yes");
@@ -258,9 +274,18 @@ loadingPage()
     }
 
     function DeletComment() {
-      let xx = document.querySelector("replycommentItem");
-      console.log("delete");
       dialog.close();
+    }
+
+    let edit = document.querySelector(".editIcon");
+    edit.addEventListener("click", editeParagraph);
+
+    function editeParagraph() {
+      let textareas = document.querySelectorAll(".juliusomo textarea");
+      textareas.forEach((textarea) => {
+        textarea.disabled = !textarea.disabled;
+        textarea.style.border = "1px solid hsl(238, 40%, 52%)"
+      });
     }
 
     function openMedia() {
