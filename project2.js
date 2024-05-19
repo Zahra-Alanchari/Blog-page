@@ -174,6 +174,7 @@ loadingPage()
         let scoreElement = item.parentNode.nextSibling;
         let currentScore = parseInt(scoreElement.innerHTML);
         scoreElement.innerHTML = ++currentScore;
+        item.removeEventListener("click", plusOne);
       }
     });
 
@@ -185,6 +186,7 @@ loadingPage()
         let scoreElement = item.parentNode.previousSibling;
         let currentScore = parseInt(scoreElement.innerHTML);
         scoreElement.innerHTML = --currentScore;
+        item.removeEventListener("click", minusOne);
       }
     });
 

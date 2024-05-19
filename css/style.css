@@ -755,6 +755,7 @@ h5 {
   }
   .deleteIcon:hover {
     color: hsl(357, 100%, 86%);
+    cursor: pointer;
   }
   .deleteIcon .delete {
     width: 10.67px;
@@ -767,6 +768,7 @@ h5 {
   }
   .editIcon:hover {
     color: hsl(239, 57%, 85%);
+    cursor: pointer;
   }
   .box {
     width: 311px;
@@ -829,6 +831,7 @@ h5 {
   .commentBox .butn:hover {
     background-color: hsl(239, 57%, 85%);
     border: 1px solid hsl(239, 57%, 85%);
+    cursor: pointer;
   }
   .commentBox .imagebox {
     width: 40px;

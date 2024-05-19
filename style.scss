@@ -631,6 +631,7 @@ h5 {
     @include positionTopAndLeft(30, 487);
     &:hover{
       color: hsl(357, 100%, 86%);
+      cursor: pointer;
       }
     
 
@@ -642,6 +643,7 @@ h5 {
     @include positionTopAndLeft(29, 563);
     &:hover{
       color: $Light-grayish-blue;
+      cursor: pointer;
       }
   }
   
@@ -689,6 +691,7 @@ h5 {
       &:hover{
         background-color: $Light-grayish-blue;
         border:1px solid $Light-grayish-blue;
+        cursor: pointer;
         }
       }
       .imagebox {
