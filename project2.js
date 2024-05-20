@@ -247,7 +247,7 @@ loadingPage()
 
     replyToPost.forEach((item) => {
       item.addEventListener("click", ReplyClick);
-      console.log(item , "kodom")
+      // console.log(item , "kodom")
 
       function ReplyClick() {
         const replyComment = document.createElement("div");
@@ -311,18 +311,18 @@ loadingPage()
         let editbtn = document.querySelector(".hide");
         editbtn.style.display = "";
        
-       
+        // edit.disabled = true;
         const xy = document.querySelector(".active");
         xy.addEventListener(
           "change",
           (event) => (contentOfTextarea = event.target.value)
         );
-
+        // edit.disabled = true;
         const c = document.querySelector(".confirmBtn");
         c.addEventListener("click", () => {
           localStorage.setItem("content", contentOfTextarea);
           c.remove();
-          c.disabled = false;
+          edit.disabled = false;
         });
 
 
