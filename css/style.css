@@ -208,6 +208,9 @@ body {
   text-align: center;
 }
 
+.amyrobson button {
+  font-size: 18px;
+}
 .amyrobson .replysection {
   color: hsl(238, 40%, 52%);
   width: 66px;
@@ -499,13 +502,37 @@ h5 {
   font-weight: 400;
 }
 
-.editParag {
+.confirmBtn {
   display: none;
 }
 
 @media screen and (min-width: 980px) {
   body {
     background-color: hsl(228, 33%, 97%);
+  }
+  .confirmBtn {
+    display: flex;
+    border: 1px solid hsl(238, 40%, 52%);
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 190px;
+    left: 520px;
+    width: 104px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .confirmBtn h2 {
+    background-color: hsl(238, 40%, 52%);
+    font-size: 16px;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+  }
+  .active {
+    width: 300px;
+    height: 200px;
   }
   .post {
     width: 730px;

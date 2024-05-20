@@ -192,6 +192,9 @@ body {
 }
 
 .amyrobson {
+  button{
+    font-size: 18px;
+  }
   .replysection {
     color: $color-blue;
     @include widthAndHight(66, 24);
@@ -416,20 +419,44 @@ h5 {
     margin-right: 15px;
   }
 }
-.juliusomo .paragraph{
+.juliusomo{
+  .paragraph{
   border: none;
   font-family: 'Rubik';
   font-size: 16px;
   font-weight: 400;
 
-}
-.editParag{
+  }
+} 
+.confirmBtn{
   display: none;
 }
+
+
 //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 @media screen and (min-width:980px) {
   body{
     background-color: $very-light-gray;
+  }
+
+  .confirmBtn{
+    display: flex;
+    border: 1px solid $color-blue;
+    background-color: $color-blue;
+    color: $color-white;
+    text-align: center;
+    @include positionTopAndLeft(190,520 );
+    @include widthAndHight(104,48 );
+    border-radius: 8px;
+    h2{
+      background-color: $color-blue;
+      font-size: 16px;
+      @include positionTopAndLeft(12,20 )
+
+    }
+  }
+  .active{
+    @include widthAndHight(300,200 )
   }
 
   .post {

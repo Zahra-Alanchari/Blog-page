@@ -120,12 +120,18 @@ loadingPage()
           profile.appendChild(you);
           date.className = "days";
           content.classList.add("editParag");
+          content.remove();
           firstComment.classList.add("juliusomo");
           const zahra = document.createElement("textarea");
           zahra.defaultValue = repliesItem.content;
           zahra.className = "paragraph";
           firstComment.appendChild(zahra);
           zahra.disabled = true; // Disable the textarea by default
+          let editbtn = document.createElement("button");
+          editbtn.innerHTML = `<h2>UPDATE</h2>`;
+          editbtn.setAttribute("class", "hide confirmBtn");
+          editbtn.style.display = "none";
+          firstComment.appendChild(editbtn);
         }
 
         const box = document.createElement("div");
@@ -228,8 +234,20 @@ loadingPage()
       }
     });
 
+
+
+
+
+
+
+
+
+
+
+
     replyToPost.forEach((item) => {
       item.addEventListener("click", ReplyClick);
+      console.log(item , "kodom")
 
       function ReplyClick() {
         const replyComment = document.createElement("div");
@@ -282,9 +300,34 @@ loadingPage()
 
     function editeParagraph() {
       let textareas = document.querySelectorAll(".juliusomo textarea");
+      let aa = document.querySelector(".juliusomo");
+      aa.style.height = "283px";
       textareas.forEach((textarea) => {
         textarea.disabled = !textarea.disabled;
-        textarea.style.border = "1px solid hsl(238, 40%, 52%)"
+        textarea.classList.add("active");
+        textarea.style.border = "1px solid hsl(238, 40%, 52%)";
+        textarea.style.borderRadius = "5px";
+        textarea.style.padding = "5px";
+        let editbtn = document.querySelector(".hide");
+        editbtn.style.display = "";
+       
+       
+        const xy = document.querySelector(".active");
+        xy.addEventListener(
+          "change",
+          (event) => (contentOfTextarea = event.target.value)
+        );
+
+        const c = document.querySelector(".confirmBtn");
+        c.addEventListener("click", () => {
+          localStorage.setItem("content", contentOfTextarea);
+          c.remove();
+          c.disabled = false;
+        });
+
+
+
+
       });
     }
 
