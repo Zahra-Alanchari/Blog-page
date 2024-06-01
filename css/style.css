@@ -320,11 +320,16 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: hsl(238, 40%, 52%);
+  border: 0;
   cursor: pointer;
 }
 .postReply .firstComment .replysection .replyToPost {
   width: 14px;
   height: 12.25px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.postReply .firstComment .reply {
   padding-right: 5px;
   vertical-align: middle;
 }
@@ -745,13 +750,18 @@ h5 {
   }
   .postReply .firstComment .profileSection {
     position: absolute;
-    top: 24px;
-    left: 88px;
+    top: 6px;
+    left: 18px;
   }
   .postReply .firstComment .profileSection span {
     position: absolute;
-    top: 6px;
-    left: 180px;
+    top: 23px;
+    left: 260px;
+  }
+  .postReply .firstComment .profileSection .name {
+    position: absolute;
+    top: 17px;
+    left: 150px;
   }
   .postReply .firstComment .btn {
     width: 40px;

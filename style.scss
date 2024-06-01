@@ -282,17 +282,26 @@ body {
       }
     }
     .replysection {
+      // background-color: red;
       @include widthAndHight(66, 24);
       @include positionTopAndLeft(232, 243);
       @include fontweight();
       color: $color-blue;
+      border: 0;
       cursor: pointer;
       .replyToPost {
         @include widthAndHight(14, 12.25);
         padding-right: 5px;
         vertical-align: middle;
+        
       }
     }
+    .reply{
+      padding-right: 5px;
+      vertical-align: middle;
+    }
+    
+    
   }
   .paragraph {
     @include widthAndHight(293, 144);
@@ -506,6 +515,7 @@ h5 {
       @include widthAndHight(32, 32);
       @include positionTopAndLeft(16, 88);
     }
+    
   
     span {
       @include widthAndHight(92, 24);
@@ -634,9 +644,12 @@ h5 {
         margin-top: 0px;
       }
       .profileSection{
-        @include positionTopAndLeft(24, 88);
+        @include positionTopAndLeft(6, 18);
         span{
-          @include positionTopAndLeft(6, 180);
+          @include positionTopAndLeft(23, 260);
+        }
+        .name{
+          @include positionTopAndLeft(17, 150);
         }
 
       }
@@ -655,6 +668,7 @@ h5 {
         }
       }
       .replysection {
+        
         @include positionTopAndLeft(28, 552);
         &:hover{
           color: $Light-grayish-blue;
