@@ -1,7 +1,7 @@
 $color-white: white;
 $color-gray: hsl(211, 10%, 45%);
-$very-light-gray:hsla(228, 33%, 97%, 1);
-$light-gray:hsla(224, 19%, 93%, 1);
+$very-light-gray: hsla(228, 33%, 97%, 1);
+$light-gray: hsla(224, 19%, 93%, 1);
 $color-blue: hsl(238, 40%, 52%);
 $color-red: hsla(358, 79%, 66%, 1);
 $Light-grayish-blue: hsl(239, 57%, 85%);
@@ -15,11 +15,11 @@ $Light-grayish-blue: hsl(239, 57%, 85%);
   top: $top * 1px;
   left: $left * 1px;
 }
-@mixin fontweight{
+@mixin fontweight {
   font-weight: 400;
   line-height: 24px;
 }
-@mixin dialogButton($col){
+@mixin dialogButton($col) {
   color: $color-white;
   border: 0;
   border-radius: 5px;
@@ -43,7 +43,7 @@ body {
   @include widthAndHight(273, 32);
   .you {
     @include widthAndHight(36, 19);
-    @include positionTopAndLeft(15, 135);
+    @include positionTopAndLeft(24, 135);
     background-color: $color-blue;
     color: $color-white;
     border-radius: 3px;
@@ -192,7 +192,7 @@ body {
 }
 
 .amyrobson {
-  button{
+  button {
     font-size: 18px;
   }
   .replysection {
@@ -282,7 +282,6 @@ body {
       }
     }
     .replysection {
-      // background-color: red;
       @include widthAndHight(66, 24);
       @include positionTopAndLeft(232, 243);
       @include fontweight();
@@ -293,15 +292,12 @@ body {
         @include widthAndHight(14, 12.25);
         padding-right: 5px;
         vertical-align: middle;
-        
       }
     }
-    .reply{
+    .reply {
       padding-right: 5px;
       vertical-align: middle;
     }
-    
-    
   }
   .paragraph {
     @include widthAndHight(293, 144);
@@ -428,44 +424,40 @@ h5 {
     margin-right: 15px;
   }
 }
-.juliusomo{
-  .paragraph{
-  border: none;
-  font-family: 'Rubik';
-  font-size: 16px;
-  font-weight: 400;
-
+.juliusomo {
+  .paragraph {
+    border: none;
+    font-family: "Rubik";
+    font-size: 16px;
+    font-weight: 400;
   }
-} 
-.confirmBtn{
+}
+.confirmBtn {
   display: none;
 }
 
-
-//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-@media screen and (min-width:980px) {
-  body{
+@media screen and (min-width: 980px) {
+  body {
     background-color: $very-light-gray;
   }
 
-  .confirmBtn{
+  .confirmBtn {
     display: flex;
     border: 1px solid $color-blue;
     background-color: $color-blue;
     color: $color-white;
     text-align: center;
-    @include positionTopAndLeft(190,520 );
-    @include widthAndHight(104,48 );
+    @include positionTopAndLeft(190, 520);
+    @include widthAndHight(104, 48);
     border-radius: 8px;
-    h2{
+    h2 {
       background-color: $color-blue;
       font-size: 16px;
-      @include positionTopAndLeft(12,20 )
-
+      @include positionTopAndLeft(12, 20);
     }
   }
-  .active{
-    @include widthAndHight(300,200 )
+  .active {
+    @include widthAndHight(300, 200);
   }
 
   .post {
@@ -473,7 +465,7 @@ h5 {
     margin: 0 auto;
     padding: 1px;
     overflow: hidden;
-  
+
     .addDiv {
       @include widthAndHight(730, 144);
       padding: 0px;
@@ -484,7 +476,7 @@ h5 {
         @include widthAndHight(40, 40);
         @include positionTopAndLeft(25, 25);
       }
-  
+
       .textarea {
         @include widthAndHight(506, 96);
         @include positionTopAndLeft(25, 90);
@@ -493,7 +485,7 @@ h5 {
         @include widthAndHight(104, 48);
         @include positionTopAndLeft(25, 610);
         font-weight: bold;
-        &:hover{
+        &:hover {
           background-color: $Light-grayish-blue;
         }
       }
@@ -503,30 +495,26 @@ h5 {
   .profileSection {
     display: flex;
     @include widthAndHight(273, 32);
-    .you {
-      @include positionTopAndLeft(7, 120);
-    }
+
     .days {
       @include widthAndHight(80, 24);
       @include positionTopAndLeft(15, 180);
     }
-  
+
     .profilePic {
       @include widthAndHight(32, 32);
       @include positionTopAndLeft(16, 88);
     }
-    
-  
+
     span {
       @include widthAndHight(92, 24);
       @include positionTopAndLeft(22, 239);
     }
-    .name{
+    .name {
       @include positionTopAndLeft(16, 136);
       font-weight: 400;
     }
   }
-
 
   #main {
     width: 740px;
@@ -541,9 +529,6 @@ h5 {
       @include positionTopAndLeft(24, 24);
       .plus {
         @include positionTopAndLeft(11.9, 15.58);
-        // &:hover{
-        //   color: $color-blue;
-        //   }
       }
       .minus {
         @include positionTopAndLeft(81.16, 15.01);
@@ -559,13 +544,13 @@ h5 {
   .maxblagun {
     .replysection {
       @include positionTopAndLeft(17, 640);
-  
+
       .reply {
         @include widthAndHight(14, 12.25);
         padding-right: 5px;
         vertical-align: middle;
       }
-      &:hover{
+      &:hover {
         color: $Light-grayish-blue;
       }
     }
@@ -588,11 +573,11 @@ h5 {
       }
     }
   }
-  
+
   .amyrobson {
     .replysection {
       @include positionTopAndLeft(17, 640);
-      &:hover{
+      &:hover {
         color: $Light-grayish-blue;
       }
     }
@@ -602,7 +587,7 @@ h5 {
     margin-left: 40px;
     margin-top: 15px;
     overflow: hidden;
-  
+
     .postReply {
       width: 642px;
     }
@@ -612,7 +597,7 @@ h5 {
       clear: both;
     }
   }
-  
+
   .post {
     .firstComment {
       padding: 0px;
@@ -629,7 +614,7 @@ h5 {
       margin-top: 0px;
     }
   }
-  
+
   .postReply {
     .firstComment {
       @include widthAndHight(642, 167);
@@ -643,15 +628,19 @@ h5 {
         @include positionTopAndLeft(71, 88);
         margin-top: 0px;
       }
-      .profileSection{
+      .profileSection {
         @include positionTopAndLeft(6, 18);
-        span{
+        span {
           @include positionTopAndLeft(23, 260);
         }
-        .name{
-          @include positionTopAndLeft(17, 150);
+        .name {
+          @include positionTopAndLeft(17, 130);
         }
-
+      }
+      .jul {
+        .name {
+          @include positionTopAndLeft(17, 170);
+        }
       }
       .btn {
         @include widthAndHight(40, 100);
@@ -668,9 +657,8 @@ h5 {
         }
       }
       .replysection {
-        
         @include positionTopAndLeft(28, 552);
-        &:hover{
+        &:hover {
           color: $Light-grayish-blue;
         }
         .replyToPost {
@@ -682,11 +670,10 @@ h5 {
 
   .deleteIcon {
     @include positionTopAndLeft(30, 487);
-    &:hover{
+    &:hover {
       color: hsl(357, 100%, 86%);
       cursor: pointer;
-      }
-    
+    }
 
     .delete {
       @include widthAndHight(10.67, 14);
@@ -694,37 +681,37 @@ h5 {
   }
   .editIcon {
     @include positionTopAndLeft(29, 563);
-    &:hover{
+    &:hover {
       color: $Light-grayish-blue;
       cursor: pointer;
-      }
+    }
   }
-  
+
   .box {
     @include widthAndHight(311, 40);
   }
-  
+
   .addDivreply {
     @include widthAndHight(642, 144);
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     margin-left: 30px;
     margin-top: 5px;
     .avatar {
       @include widthAndHight(40, 40);
       @include positionTopAndLeft(25, 25);
     }
-  
+
     .replytextarea {
       @include positionTopAndLeft(25, 90);
       @include widthAndHight(418, 96);
     }
-  
+
     .replyButton {
       @include widthAndHight(104, 48);
       @include positionTopAndLeft(25, 520);
       font-weight: bold;
-      &:hover{
+      &:hover {
         background-color: $Light-grayish-blue;
       }
     }
@@ -741,20 +728,16 @@ h5 {
       @include widthAndHight(104, 48);
       @include positionTopAndLeft(25, 610);
       font-weight: bold;
-      &:hover{
+      &:hover {
         background-color: $Light-grayish-blue;
-        border:1px solid $Light-grayish-blue;
+        border: 1px solid $Light-grayish-blue;
         cursor: pointer;
-        }
-      }
-      .imagebox {
-        @include widthAndHight(40, 40);
-        margin-left: 30px;
-        @include positionTopAndLeft(25, 5);
       }
     }
-    
+    .imagebox {
+      @include widthAndHight(40, 40);
+      margin-left: 30px;
+      @include positionTopAndLeft(25, 5);
+    }
   }
-
-
-
+}

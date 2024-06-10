@@ -18,7 +18,7 @@ body {
   width: 36px;
   height: 19px;
   position: absolute;
-  top: 15px;
+  top: 24px;
   left: 135px;
   background-color: hsl(238, 40%, 52%);
   color: white;
@@ -583,11 +583,6 @@ h5 {
     width: 273px;
     height: 32px;
   }
-  .profileSection .you {
-    position: absolute;
-    top: 7px;
-    left: 120px;
-  }
   .profileSection .days {
     width: 80px;
     height: 24px;
@@ -761,7 +756,12 @@ h5 {
   .postReply .firstComment .profileSection .name {
     position: absolute;
     top: 17px;
-    left: 150px;
+    left: 130px;
+  }
+  .postReply .firstComment .jul .name {
+    position: absolute;
+    top: 17px;
+    left: 170px;
   }
   .postReply .firstComment .btn {
     width: 40px;

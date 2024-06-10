@@ -107,6 +107,7 @@ function createProfile(user, createdAt) {
     const you = document.createElement("div");
     you.innerHTML = "you";
     you.className = "you";
+    profile.classList.add("jul");
     profile.appendChild(you);
   }
 
